@@ -3,6 +3,7 @@
  */
 package com.example.springboot.services;
 
+import java.util.Collections;
 import java.util.List;
 
 import com.example.springboot.models.Employee;
@@ -16,8 +17,9 @@ public class EmployeeDataServiceImpl implements EmployeeDataService {
 
 	@Override
 	public List<Employee> getData() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		
+		return Collections.singletonList(new Employee());
 	}
 
 }
