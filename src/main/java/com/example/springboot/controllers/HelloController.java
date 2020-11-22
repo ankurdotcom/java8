@@ -7,9 +7,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.springboot.models.Customer;
 import com.example.springboot.models.Employee;
-import com.example.springboot.services.CustomerDataService;
-import com.example.springboot.services.DataService;
-import com.example.springboot.services.EmployeeDataService;
+import com.example.springboot.models.Items;
+import com.example.springboot.services.data.CustomerDataService;
+import com.example.springboot.services.data.DataService;
+import com.example.springboot.services.data.EmployeeDataService;
 
 @RestController
 public class HelloController {
@@ -28,8 +29,15 @@ public class HelloController {
 	
 	@RequestMapping("/customers")
 	public List<Customer> customers() {
-		DataService<Customer> employeeDataService = new CustomerDataService();
-		List<Customer> data = employeeDataService.getData();
+		DataService<Customer> customerDataService = new CustomerDataService();
+		List<Customer> data = customerDataService.getData();
+		return data;
+	}
+	
+	@RequestMapping("/items")
+	public List<Items> items() {//TODO
+		DataService<Items> customerDataService = null;
+		List<Items> data = customerDataService.getData();
 		return data;
 	}
 

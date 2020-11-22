@@ -1,4 +1,4 @@
-package com.example.springboot.services;
+package com.example.springboot.services.data;
 
 import java.util.Collections;
 import java.util.List;
