@@ -3,6 +3,7 @@ package com.example.springboot.controllers;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.springboot.models.Employee;
+import com.example.springboot.services.DataService;
 import com.example.springboot.services.EmployeeDataService;
 import com.example.springboot.services.EmployeeDataServiceImpl;
 
@@ -20,8 +21,9 @@ public class HelloController {
 	
 	@RequestMapping("/employees")
 	public List<Employee> employees() {
-		EmployeeDataService e = new EmployeeDataServiceImpl();
-		return e.getData();
+		DataService<Employee> employeeDataServiceImpl = new EmployeeDataServiceImpl();
+		List<Employee> data = employeeDataServiceImpl.getData();
+		return data;
 	}
 
 }

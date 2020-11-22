@@ -1,6 +1,6 @@
 package com.example.springboot.services;
 
-public interface EmployeeDataService extends DataService {
+public interface EmployeeDataService<E> extends DataService<E> {
 
 	
 }

@@ -13,12 +13,10 @@ import com.example.springboot.models.Employee;
  * @param Employee
  *
  */
-public class EmployeeDataServiceImpl implements EmployeeDataService {
+public class EmployeeDataServiceImpl implements DataService<Employee> {
 
 	@Override
 	public List<Employee> getData() {
-		
-		
 		return Collections.singletonList(new Employee());
 	}
 
