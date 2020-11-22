@@ -1,15 +1,13 @@
 package com.example.springboot.controllers;
 
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.springboot.models.Employee;
 import com.example.springboot.services.DataService;
-import com.example.springboot.services.EmployeeDataService;
 import com.example.springboot.services.EmployeeDataServiceImpl;
-
-import java.util.List;
-
-import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
 public class HelloController {
